@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Cadastro de clientes </h1>
+
+<div style="padding-left 5%; padding-top  2%;">
+
+    <form method="POST" action= "{% url 'correios:cadastrar'  %}" >
+    <p>Formulario de cadastro </p>
+    {% csrf_token%}
+
+    <h3>Dados do cliente</h3>
+    {{form.nome.label}}
+    {{form.nome}}
+
+    {{form.email.label}}
+    {{form.email}}
+    <h3>Dados do endereço</h3>
+
+    {{form.cep.label}}
+    {{form.cep}}
+    <input type="submit" VALUE="carregar endereço">
+    <br>
+    <br>
+
+    {{form.uf.label}}
+    {{form.uf}}
+
+
+    {{form.cidade.label}}
+    {{form.cidade}}
+
+
+    {{form.bairro.label}}
+    {{form.bairro}}
+
+
+    {{form.rua.label}}
+    {{form.rua}}
+    <br>
+    <br>
+
+    {{form.complemento.label}}
+    {{form.complemento}}
+
+     {{form.logradouro.label}}
+    {{form.logradouro}}
+
+    <h3>Dados do contato</h3>
+
+    {{form.numero1.label}}
+    {{form.numero1}}
+
+    {{form.numero2.label}}
+    {{form.numero2}}
+
+    <br>
+    <br>
+
+    <input type="submit" VALUE="cadastrar">
+
+    </form>
+
+    {% if msg %} {{msg}} {% endif %}
+
+    <p>Clique <a href="{% url 'correios:lista' %}">  aqui</a> para consultar</p>
+
+
+
+</div>
+
+</body>
+</html>

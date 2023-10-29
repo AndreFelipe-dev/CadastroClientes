@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page Sistema</title>
+</head>
+<body>
+<h1> Sistema de gerência de pessoas</h1>
+
+<p>
+    Utilize o menu abaixo para efetuar acesso ao sistema:
+</p>
+
+<ul>
+    <li> <a href="{% url 'correios:home' %}">Home Page</a></li>
+    <li> <a href="{% url 'correios:cadastro' %}">adastro de pessoas</a></li>
+    <li> <a href="{% url 'correios:lista' %}">Listagem de pessoas</a></li>
+</ul>
+
+</body>
+</html>
