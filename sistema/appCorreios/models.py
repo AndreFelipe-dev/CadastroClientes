@@ -54,8 +54,9 @@ class Telefone(models.Model):
         CEL = 2
 
     codigo = models.AutoField(primary_key=True)
-    tipo = models.IntegerField(choices=Tipo.choices)
     numero = models.CharField(max_length=30, null=False)
+    tipo = models.IntegerField(choices=Tipo.choices)
+
 
     pessoa = models.ForeignKey(Pessoa, on_delete=models.CASCADE,)
 
